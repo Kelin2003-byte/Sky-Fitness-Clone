@@ -5,3 +5,31 @@ body {
 .nav {
     display: flex;
 }
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 14.5%;
+    padding-top: 0.5%;
+}
+.logo {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+.options {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    padding-right: 13%;
+    margin-top: -25px;
+}
+.options a {
+    text-decoration: none;
+    color: white;
+}
+.member-container {
+    border: 1px solid rgb(93, 93, 228);
+    padding: 7px;
+    background-color: rgb(34, 85, 105);
+    margin-top: -10px;
+}
