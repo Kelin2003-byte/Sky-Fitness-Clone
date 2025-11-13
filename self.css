@@ -28,8 +28,84 @@ body {
     color: white;
 }
 .member-container {
-    border: 1px solid rgb(93, 93, 228);
+    border: 1px solid rgb(31, 151, 199);
     padding: 7px;
-    background-color: rgb(34, 85, 105);
+    background-color: rgb(31, 151, 199);
     margin-top: -10px;
+}
+.hours {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 9%;
+    margin-top: 10px;
+}
+.opening {
+    color: white;
+    border: 5px solid rgb(167, 11, 11);
+    background-color: rgb(167, 11, 11);
+}
+.hero1 {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -35px;
+}
+.hero-design {
+    width: 1000px;
+    height: auto;
+    object-fit: contain;
+}
+.fit1 {
+    display: flex;
+    justify-content: left;
+}
+.fit {
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 65px;
+    margin-top: -450px;
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+        transform: skewX(-3deg);
+}
+.stay1 {
+    display: flex;
+    justify-content: left;
+}
+.stay {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(42, 140, 179);
+    font-style: italic;
+    font-weight: 900;
+    font-size: 60px;
+    margin-top: -415px;
+    margin-left: 220px;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: skewX(-3deg);
+}
+.welcome1 {
+    display: flex;
+    justify-content: left;
+}
+.welcome {
+    color: white;
+    margin-top: -320px;
+    margin-left: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.learn1 {
+    display: flex;
+    justify-content: left;
+    border: 1px solid rgb(31, 151, 199);
+    padding: 10px 20px;
+    background-color: rgb(31, 151, 199);
+    margin-top: -250px;
+    margin-left: 120px;
+}
+.learn1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: bold;
 }
