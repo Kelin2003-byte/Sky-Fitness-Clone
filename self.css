@@ -30,82 +30,114 @@ body {
 .member-container {
     border: 1px solid rgb(31, 151, 199);
     padding: 7px;
-    background-color: rgb(31, 151, 199);
-    margin-top: -10px;
+    background: linear-gradient(to right, rgb(17, 79, 104), #1e90ff);
+    margin-top: -5px;
 }
-.hours {
+.background1 {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 9%;
-    margin-top: 10px;
+    align-items: center;
+    padding: 20px;
 }
-.opening {
-    color: white;
-    border: 5px solid rgb(167, 11, 11);
-    background-color: rgb(167, 11, 11);
+.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    z-index: 1;
 }
-.hero1 {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: -35px;
-}
-.hero-design {
-    width: 1000px;
-    height: auto;
-    object-fit: contain;
-}
-.fit1 {
+.opening1 {
+    position: absolute;
+    z-index: 2;
+    width: 300px;
+    height: 60px;
+    color: #fff;
     display: flex;
     justify-content: left;
+    margin-top: -500px;
+    margin-left: 950px;
 }
-.fit {
+.opening {
+    padding: 3px 5px ;
+    background: rgb(167, 11, 11);
+    border: 3px solid rgb(167, 11, 11);
+    font-weight: 700;
+}
+.gym-style-1 {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    z-index: 1;
+    right: -35px;
+    top: 105px;
+    overflow: hidden;
+}
+.gym-style {
+    width: 1070px;
+    height: auto;
+}
+.get1 {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 85px;
+    top: 75px;
+}
+.get {
     color: white;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 65px;
-    margin-top: -450px;
-    margin-left: 100px;
+    font-size: 70px;
     font-family: Arial, Helvetica, sans-serif;
-        transform: skewX(-3deg);
+    font-weight: 850;
+    font-style: italic;
+    transform: skewX(-3deg);
 }
 .stay1 {
     display: flex;
     justify-content: left;
+    position: absolute;
+    left: 205px;
+    top: 113px;
 }
 .stay {
-    color: transparent;
-    -webkit-text-stroke: 1px rgb(42, 140, 179);
-    font-style: italic;
-    font-weight: 900;
-    font-size: 60px;
-    margin-top: -415px;
-    margin-left: 220px;
+    font-size: 70px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 850;
+    font-style: italic;
     transform: skewX(-3deg);
+    color: transparent;
+    -webkit-text-stroke: 2px #1e90ff;
 }
-.welcome1 {
+.lifestyle1 {
     display: flex;
     justify-content: left;
+    position: absolute;
+    left: 85px;
+    top: 280px;
 }
-.welcome {
-    color: white;
-    margin-top: -320px;
-    margin-left: 120px;
+.lifestyle {
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
 }
 .learn1 {
     display: flex;
     justify-content: left;
-    border: 1px solid rgb(31, 151, 199);
-    padding: 10px 20px;
-    background-color: rgb(31, 151, 199);
-    margin-top: -250px;
-    margin-left: 120px;
+    position: absolute;
+    left: 85px;
+    top: 350px;
+    border: 1px solid #1e90ff;
+    background: linear-gradient(to right, rgb(17, 79, 104), #1e90ff);
+    padding: 5px 25px;
+    height: 40px;
 }
-.learn1 a {
+.learn {
     color: white;
-    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-style: bold;
+    margin-top: 3px;
 }
