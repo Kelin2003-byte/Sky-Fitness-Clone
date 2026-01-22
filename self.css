@@ -10,12 +10,13 @@ body{
 }
 
 
-
-
 /* SECTION1 */
 .section1 {
+    position: relative;
     min-height: 100vh;
     width: 100%;
+    overflow: hidden;
+    padding: 0;
 }
 .image-container {
     display: flex;
@@ -46,21 +47,26 @@ body{
     background: linear-gradient(to right, rgb(17, 79, 104), #1e90ff);
     margin-top: -6px;
 }
-.background1 {
+.navbar {
     position: relative;
+    z-index: 20;
+    padding-top: 3px;
+}
+.background1 {
+    position: static;
     width: 100%;
-    height: 550px;
+    height: 100%;
     overflow: hidden;
-    display: flex;
     align-items: center;
-    padding: 1.65% 0.5%;
     margin: 0 auto;
 }
 .background {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     inset: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     object-fit: cover;
     transform: scaleX(-1);
     z-index: 1;
@@ -74,7 +80,7 @@ body{
     color: #fff;
     display: flex;
     justify-content: left;
-    top: 7%;
+    top: 10%;
     right: 5%;
 }
 .opening {
@@ -89,7 +95,7 @@ body{
     position: absolute;
     z-index: 1;
     right: -4.5%;
-    top: 17%;
+    top: 25%;
     overflow: hidden;
     opacity: 0;
     transform: translateX(50px);
@@ -103,8 +109,8 @@ body{
     display: flex;
     justify-content: left;
     position: absolute;
-    left: 6%;
-    top: 23.5%;
+    left: 8%;
+    top: 33.5%;
     opacity: 0;
     transform: translateX(-50px);
     animation: slideInContainer 1.8s forwards;
@@ -124,8 +130,8 @@ body{
     display: flex;
     justify-content: left;
     position: absolute;
-    left: 15.2%;
-    top: 30%;
+    left: 17.2%;
+    top: 40%;
     opacity: 0;
     transform: translateY(50px);
     animation: slideUpContainer 1.8s forwards;
@@ -147,8 +153,11 @@ body{
     display: flex;
     justify-content: left;
     position: absolute;
-    left: 6%;
-    top: 47%;
+    left: 8%;
+    top: 57%;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInContainer 1.8s forwards;
 }
 .lifestyle {
     color: #fff;
@@ -159,8 +168,8 @@ body{
     display: inline-flex;
     justify-content: left;
     position: absolute;
-    left: 6%;
-    top: 60%;
+    left: 8%;
+    top: 65%;
     border: 1px solid #1e90ff;
     background: linear-gradient(to right, rgb(17, 79, 104), #1e90ff);
     padding: 5px 25px;
@@ -209,14 +218,13 @@ body{
 }
 
 
-
-    /* SECTION 2 */
+/* SECTION 2 */
 .section2 {
     position: relative;
     width: 100%;
     min-height: 60vh;
     overflow: hidden;
-    padding: 0% 0.2%;
+    padding: 0;
     margin: 0 auto;
     background-image: url("drums.jpg");
     background-size: cover;
@@ -266,8 +274,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 650;
 }
-
-
 
 
 /* SECTION 3*/
@@ -353,8 +359,6 @@ body{
     height: 100%;
     object-fit: cover;
 }
-
-
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -370,13 +374,14 @@ body{
     to   { transform: translateX(-50%); }
 }
 
+
 /* SECTION 4*/
 .section4 {
     position: relative;
     width: 100%;
     min-height: 60vh;
     overflow: hidden;
-    padding: 0% 0.2%;
+    padding: 0;
     margin: 0 auto;
     background-image: url("sec4.jpg");
     background-size: cover;
@@ -416,13 +421,14 @@ body{
     -webkit-text-stroke: 2px white;
 }
 
+
 /* SECTION 5 */
 .section5 {
     position: relative;
     background-color: rgb(2, 18, 27);
     min-height: 120vh;
     width: 100%;
-    padding: 0% 0.2%;
+    padding: 0;
     margin: 0 auto;
 }
 .why {
@@ -451,7 +457,7 @@ body{
 .vertical-bars {
     position: absolute;
     top: 65%;
-    left: 51.2%;
+    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     gap: 30px;
@@ -523,7 +529,7 @@ body{
     width: 100%;
     min-height: 80vh;
     overflow: hidden;
-    padding: 0% 0.2%;
+    padding: 0;
     margin: 0 auto;
     background-image: url("testimonial.jpg");
     background-size: cover;
@@ -597,4 +603,73 @@ body{
     top: 79%;
     left: 47%;
     color: white;
+}
+
+
+/*SECTION 7*/
+.section7 {
+    position: relative;
+    background-color: black;
+    min-height: 180vh;
+    width: 100%;
+    padding: 0;
+}
+.meet {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.meet h1 {
+    font-size: 65px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(28, 115, 173);
+}
+.meet p {
+    color: white;
+    font-size: 14.5px;
+    line-height: 1.6;
+    transform: translateY(-10%);
+}
+.passion {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 40px;
+    display: flex;
+    left: 5%;
+}
+.dave {
+    border: 2px solid #1e90ff;
+    width: 270px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.dave img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease;
+}
+.dave::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background 1.5s ease;
+    pointer-events: none;
+}
+.dave:hover img {
+    transform: scale(1.3);
+}
+.dave:hover::after {
+    background: rgba(0, 0, 0, 0.3);
 }
