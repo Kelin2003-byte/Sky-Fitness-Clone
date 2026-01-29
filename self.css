@@ -49,7 +49,7 @@ body{
 }
 .navbar {
     position: relative;
-    z-index: 20;
+    z-index: 500;
     padding-top: 3px;
 }
 .background1 {
@@ -90,27 +90,29 @@ body{
     font-weight: 700;
 }
 .gym-style-1 {
-    display: flex;
-    justify-content: right;
     position: absolute;
-    z-index: 1;
-    right: -4.5%;
-    top: 25%;
+    bottom: -60px; 
+    right: -30px;  
+    top: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     overflow: hidden;
     opacity: 0;
     transform: translateX(50px);
     animation: slideInContainer 1.8s forwards;
 }
 .gym-style {
-    width: 1070px;
-    height: auto;
+    height: 85vh; 
+    width: auto; 
+    object-fit: contain;
 }
 .get1 {
     display: flex;
     justify-content: left;
     position: absolute;
-    left: 8%;
-    top: 33.5%;
+    margin-top: -70px;
     opacity: 0;
     transform: translateX(-50px);
     animation: slideInContainer 1.8s forwards;
@@ -130,11 +132,28 @@ body{
     display: flex;
     justify-content: left;
     position: absolute;
-    left: 17.2%;
-    top: 40%;
+    margin-top: -70px;
+    margin-left: 125px;
     opacity: 0;
     transform: translateY(50px);
     animation: slideUpContainer 1.8s forwards;
+
+}
+.get1, .stay1, .lifestyle1, .learn1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    opacity: 0;
+}
+.text-content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-40%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .stay {
     font-size: 70px;
@@ -153,11 +172,11 @@ body{
     display: flex;
     justify-content: left;
     position: absolute;
-    left: 8%;
-    top: 57%;
     opacity: 0;
     transform: translateX(50px);
     animation: slideInContainer 1.8s forwards;
+    margin-left: 10px;
+    margin-top: 70px;
 }
 .lifestyle {
     color: #fff;
@@ -168,8 +187,6 @@ body{
     display: inline-flex;
     justify-content: left;
     position: absolute;
-    left: 8%;
-    top: 65%;
     border: 1px solid #1e90ff;
     background: linear-gradient(to right, rgb(17, 79, 104), #1e90ff);
     padding: 5px 25px;
@@ -179,6 +196,9 @@ body{
     opacity: 0;
     transform: translateY(50px);
     animation: slideUpContainer 2s forwards;
+    margin-left: 10px;
+    margin-top: 60px;
+    align-self: flex-start;
 }
 .learn {
     color: white;
@@ -462,6 +482,7 @@ body{
     display: flex;
     gap: 30px;
     width: 90%;
+    justify-content: center;
 }
 .bar {
     position: relative;
@@ -523,6 +544,7 @@ body{
     }
 }
 
+
 /* SECTION 6*/
 .section6 {
     position: relative;
@@ -568,12 +590,17 @@ body{
     color: transparent;
     -webkit-text-stroke: 2px white;
 }
+.smoothie1 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    width: 100%;
+}
 .smoothie {
     position: absolute;
     z-index: 2;
     color: white;
     top: 50%;
-    left: 19%;
     text-align: center;
     font-size: 14.5px;
     line-height: 1.6;
@@ -581,6 +608,7 @@ body{
     background-color: rgba(0, 0, 0, 1);
     padding: 45px 45px;
     border-radius: 10px;
+    justify-content: center;
 }
 .chidinma {
     position: absolute;
@@ -641,7 +669,11 @@ body{
     transform: translateY(-50%);
     gap: 40px;
     display: flex;
-    left: 5%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 }
 .dave {
     border: 2px solid #1e90ff;
