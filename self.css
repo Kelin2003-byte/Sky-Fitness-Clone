@@ -8,7 +8,12 @@ html {scrollbar-gutter: stable;}
 body{
     background: black;
 }
-
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* This stops the horizontal scroll dead in its tracks */
+}
 
 /* SECTION1 */
 .section1 {
@@ -51,6 +56,13 @@ body{
     position: relative;
     z-index: 500;
     padding-top: 3px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    box-sizing: border-box;
 }
 .background1 {
     position: static;
@@ -206,6 +218,9 @@ body{
     font-size: 20px;
     margin-top: 3px;
 }
+.menu-checkbox, .hamburger-icon {
+    display: none;
+}
 @keyframes slideUpContainer {
     to {
         transform: translateY(0);
@@ -236,6 +251,206 @@ body{
     height: auto;
 }
 }
+.image-container, .options {
+    padding: 0;
+    margin: 0;
+}
+@media screen and (max-width: 1024px) {
+    
+.hamburger-icon {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .options {
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background: rgba(0, 14, 20, 0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+        z-index: 1000;
+        border-bottom: 2px solid #1e90ff;
+    }
+    .menu-checkbox:checked ~ .options {
+        display: flex;
+    }
+    .member-container {
+        margin-top: 10px;
+    }
+    .opening1 {
+        top: 80px; 
+        right: 5%;
+        width: auto;
+    }
+.text-content-wrapper {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        top: 45%;
+        transform: translateY(-50%);
+    }
+    .title-group {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .get1 {
+        position: absolute;
+        margin-top: 0;
+        margin-right: -5px; 
+    }
+
+    .stay1 {
+        position: absolute;
+        margin-top: 0;
+        margin-left: -5px; 
+    }
+
+    .get, .stay {
+        font-size: 50px; 
+        white-space: nowrap;
+    }
+
+    .lifestyle1 {
+        position: relative;
+        margin: 40px 0 0 0 !important; 
+        text-align: center;
+        width: 85%;
+    }
+
+    .learn1 {
+        position: relative;
+        margin: 20px 0 0 0 !important;
+        align-self: center;
+    }    
+    .gym-style-1 {
+        width: 100%;
+        height: 35%; 
+        bottom: 0;
+        right: 0;
+        left: 0;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .gym-style {
+        height: 100%; 
+        width: auto;
+    }
+}
+/* MOBILE PHONES (Max-width 480px) */
+@media screen and (max-width: 480px) {
+    .get, .stay {
+        font-size: 35px;
+    }
+    
+    .opening {
+        font-size: 12px;
+    }
+    
+    .logo {
+        width: 140px;
+    }
+}
+/* SMART TVs (Large Screens) */
+@media screen and (min-width: 1800px) {
+    .get, .stay {
+        font-size: 100px; 
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.image-container, .options {
+    padding: 0;
+    margin: 0; 
+}
+/* --- RESPONSIVE MEDIA QUERIES --- */
+/* TABLETS & PHONES (Max-width 1024px) */
+@media screen and (max-width: 1024px) {
+    .options {
+        display: none;
+    }
+    .opening1 {
+        top: 80px; 
+        right: 5%;
+        width: auto;
+    }
+    .text-content-wrapper {
+        left: 0;
+        right: 0;
+        top: 40%;
+        transform: translateY(-50%);
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .get1, .stay1, .lifestyle1 {
+        position: relative !important;
+        margin: 0 !important;
+        justify-content: center !important;
+    }
+    .get, .stay {
+        font-size: 45px;
+    }
+    .lifestyle br {
+        display: none; 
+    }
+    .gym-style-1 {
+        width: 100%;
+        height: 35%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .gym-style {
+        height: 100%;
+        width: auto;
+    }
+}
+/* MOBILE PHONES (Max-width 480px) */
+@media screen and (max-width: 480px) {
+    .get, .stay {
+        font-size: 35px;
+    }
+    .opening {
+        font-size: 12px;
+    }
+    
+    .logo {
+        width: 140px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .get, .stay {
+        font-size: 100px; 
+    }
+}
+
 
 
 /* SECTION 2 */
@@ -294,27 +509,103 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 650;
 }
+/*--MOBILE PHONES--*/
+@media screen and (max-width: 480px) {
+    .section2 {
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pain1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        width: 75%; 
+        text-align: center; 
+        box-sizing: border-box;
+    }
+
+    .pain {
+        font-size: 22px; 
+        text-align: center;
+    }
+    .sweat {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1;
+    }
+    .sweat br {
+        display: none;
+    }
+}
+/* --- SMART TVs / 4K MONITORS --- */
+@media screen and (min-width: 1800px) {
+    .section2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        background-attachment: fixed; 
+    }
+    .pain1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px; 
+        width: 60%; 
+        max-width: 1200px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .pain {
+        font-size: 80px; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sweat {
+        font-size: 40px;
+        text-align: center;
+        line-height: 1.4;
+    }
+}
+
 
 
 /* SECTION 3*/
 .section3 {
     position: relative;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
+    display: flex;            
+    flex-direction: row;      
+    align-items: center;       
+    justify-content: center; 
+    overflow: hidden;
     scroll-timeline-name: section3timeline;
     scroll-timeline-axis: block;
 }
 .classes1 {
-    position: absolute;    
+    position: relative;        
+    width: 50%;                
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
     text-align: center;
-    left: 10%;
-    top: 20%;
-
     opacity: 0;
     transform: translateY(60px);
     animation: slideUp 1s both;
     animation-timeline: section3timeline;
     animation-range: entry 0% cover 80%;
+}
+.horizontal-strip {
+    position: relative;
+    width: 50%;
+    height: 380px;
+    overflow: hidden;
 }
 .classes.show {
     opacity: 1;
@@ -329,9 +620,11 @@ body{
 }
 .sky {
     color: white;
-    margin: 0;
+    margin: 0 auto;
     line-height: 1.5;
     font-size: 15px;
+    text-align: center;
+    max-width: 90%;
 }
 .timetable {
     border: 1px solid #1e90ff;
@@ -348,16 +641,6 @@ body{
 .view {
     color: white;
     font-size: 18px;
-}
-.horizontal-strip {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    
-    width: 50vw;
-    height: 380px;
-    overflow: hidden;
 }
 .cards {
     display: flex;
@@ -393,6 +676,27 @@ body{
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
 }
+@media screen and (max-width: 480px) {
+    .section3{
+        min-height: 85vh;
+    }
+
+    .sky br {
+        display: none;
+    }
+    .horizontal-strip {
+        display: none;
+    }  
+    .classes1 {
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(50px);
+    }
+}
+
 
 
 /* SECTION 4*/
@@ -440,6 +744,36 @@ body{
     color: transparent;
     -webkit-text-stroke: 2px white;
 }
+/*--MOBILE PHONES--*/
+@media screen and (max-width: 480px) {
+    .section4 {
+        position: relative;
+        background-attachment: scroll; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 20vh;
+    }
+    .gallery {
+        font-size: 50px; 
+        text-align: center;
+    }
+}
+/* --- SMART TVs / 4K MONITORS --- */
+@media screen and (min-width: 1800px) {
+    .section4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        background-attachment: fixed; 
+    }
+    .gallery {
+        font-size: 80px; 
+        text-align: center;
+    }
+}
+
 
 
 /* SECTION 5 */
@@ -534,15 +868,87 @@ body{
     color: white;
 }
 .bar:hover {
-    transform: translateY(-5px);       /* instant pop */
+    transform: translateY(-5px);
     box-shadow: 0 12px 35px rgba(30, 144, 255, 0.45);
 }
-@media (max-width: 900px) {
-    .vertical-bars {
+/* --- MOBILE PHONES (Max-width 480px) --- */
+@media screen and (max-width: 480px) {
+    .section5 {
+        min-height: auto; 
+        display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 80px 0;
+    }
+    .why {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        font-size: 45px;
+        margin-bottom: 20px;
+        -webkit-text-stroke: 1px rgb(28, 115, 173);
+    }
+    .check {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 85%;
+        font-size: 14px;
+        margin-bottom: 40px;
+        line-height: 1.4;
+    }
+    .check br {
+        display: none; 
+    }
+    .vertical-bars {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        flex-direction: column;
+        gap: 25px;
+        width: 90%;
+    }
+    .bar {
+        height: 380px;
+        max-width: 100%;
+    }
+    .text-box {
+        left: 20px;
+        max-width: 85%;
+        padding: 12px;
     }
 }
+/* --- SMART TVs / 4K MONITORS (Min-width 1800px) --- */
+@media screen and (min-width: 1800px) {
+    .section5 {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .why {
+        font-size: 140px;
+        top: 15%;
+    }
+    .check {
+        font-size: 24px;
+        top: 30%;
+    }
+    .vertical-bars {
+        top: 65%;
+        gap: 50px;
+    }
+    .bar {
+        height: 550px;
+        max-width: 450px;
+    }
+    .text-1 { font-size: 22px; }
+    .text-2 { font-size: 18px; }
+}
+
 
 
 /* SECTION 6*/
@@ -632,6 +1038,93 @@ body{
     left: 47%;
     color: white;
 }
+/* --- MOBILE PHONES (Max-width 480px) --- */
+@media screen and (max-width: 480px) {
+    .section6 {
+        min-height: auto;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        justify-content: center; 
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    .testimonials {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;         
+        width: 80%;
+        margin: 0 0 30px 0;
+        font-size: 35px;
+        -webkit-text-stroke: 1px white;
+        display: block;
+    }
+    .smoothie br {
+        display: none;
+    }
+    .smoothie1 {
+        position: relative !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: auto !important;
+        transform: none !important;
+    }
+    .smoothie {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        
+        width: 85%; /* Keep it centered but not touching edges */
+        padding: 30px 20px;
+        background-color: rgba(0, 0, 0, 0.9);
+        margin: 0 auto; /* Force horizontal center */
+    }
+    .profile {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .chidinma, .person {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 5px 0;
+        width: auto;
+    }
+}
+/* --- SMART TVs / 4K MONITORS (Min-width 1800px) --- */
+@media screen and (min-width: 1800px) {
+    .testimonials {
+        font-size: 140px;
+        top: 15%;
+    }
+    .smoothie {
+        font-size: 28px;
+        padding: 80px;
+        max-width: 1400px;
+    }
+    .chidinma img {
+        width: 150px;
+    }
+    .person {
+        font-size: 35px;
+        left: 50%; /* Center the name for TV */
+        transform: translateX(-50%);
+    }
+}
 
 
 /*SECTION 7*/
@@ -663,17 +1156,24 @@ body{
     line-height: 1.6;
     transform: translateY(-10%);
 }
-.passion {
+.passion-container {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    gap: 40px;
-    display: flex;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
     width: fit-content;
+    z-index: 5;
+}
+.trainer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0; 
 }
 .dave {
     border: 2px solid #1e90ff;
@@ -688,7 +1188,20 @@ body{
     object-fit: cover;
     transition: transform 1.5s ease;
 }
-.dave::after {
+.tip h1 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1e90ff;
+    border-top: none; 
+    width: 270px;
+    height: 60px;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    background: rgba(0, 0, 0, 0.5);
+}.dave::after {
     content: "";
     position: absolute;
     top: 0;
@@ -704,4 +1217,421 @@ body{
 }
 .dave:hover::after {
     background: rgba(0, 0, 0, 0.3);
+}
+.scroll-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 185px;
+    background: transparent;
+    z-index: 10;
+}
+.scroll-wrapper {
+    display: flex;
+    width: max-content; 
+    animation: infiniteScroll 30s linear infinite; 
+}
+.scroll-wrapper img {
+    width: 225px; 
+    height: 185px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0; 
+    padding: 0;
+    margin: 0;    
+}
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* --- MOBILE PHONES --- */
+@media screen and (max-width: 480px) {
+    .section7 {
+        min-height: auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0 200px 0;
+    }
+    .meet {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .meet h1 {
+        font-size: 42px;
+        -webkit-text-stroke: 1px rgb(28, 115, 173);
+        margin-bottom: 40px;
+    }
+    .meet p br {
+        display: none;
+    }
+    .passion-container {
+        position: relative;
+        top: 0;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 50px;
+    }
+    .dave, .tip h1 {
+        width: 280px;
+    }
+    .dave {
+        height: 400px;
+    }
+    .scroll-container {
+        position: absolute;
+        bottom: 0;
+        height: 120px;
+    }
+    .scroll-wrapper img {
+        width: 150px;
+        height: 120px;
+    }
+}
+/* --- SMART TVs --- */
+@media screen and (min-width: 1800px) {
+    .meet h1 {
+        font-size: 100px;
+    }
+    .meet p {
+        font-size: 24px;
+    }
+    .dave {
+        width: 350px;
+        height: 650px;
+    }
+    .tip h1 {
+        width: 350px;
+        font-size: 35px;
+        height: 80px;
+    }
+    .passion-container {
+        gap: 60px;
+    }
+}
+
+
+/*SECTION 8*/
+.section8 {
+    position: relative;
+    min-height: 85vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    background-image: url("watch.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.section8::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    background-attachment: inherit;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+.section8::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.flexible {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 800px;
+    gap: 20px;
+}
+.ready {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    -webkit-text-stroke: 2px rgb(28, 115, 173);
+    z-index: 35;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(28, 115, 173, 0.5);
+    margin: 0;
+}
+.prices {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;  
+    background-color: rgba(0, 0, 0, 0.3);  
+    padding: 30px 50px;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 15px;
+    margin: 20px auto; 
+    margin: 0;
+}
+.flexible-container {
+    border: 1px solid rgb(31, 151, 199);
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(17, 79, 104), #1e90ff);
+    margin-top: -6px;
+}
+.flexible a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}/* --- MOBILE PHONES --- */
+@media screen and (max-width: 480px) {
+    .section8 {
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flexible {
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 95%;
+        gap: 15px;
+        padding: 40px 10px;
+    }
+    .ready {
+        font-size: 32px;
+        -webkit-text-stroke: 1px rgb(28, 115, 173);
+        line-height: 1.2;
+    }
+    .prices {
+        font-size: 15px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .prices br {
+        display: none; 
+    }
+    .flexible-container {
+        width: 80%;
+        padding: 15px 0;
+    }
+    .flexible a {
+        font-size: 18px;
+    }
+}
+/* --- SMART TVs --- */
+@media screen and (min-width: 1800px) {
+    .ready {
+        font-size: 80px;
+    }
+    .prices {
+        font-size: 30px;
+        max-width: 1200px;
+        padding: 50px;
+    }
+    .flexible-container {
+        padding: 20px 40px;
+    }
+    .flexible a {
+        font-size: 32px;
+    }
+}
+
+
+
+/*SECTION 9*/
+.section9 {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background: linear-gradient(to right, rgb(0, 14, 20), #000913);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.section9-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 80px;
+    width: 90%;
+    max-width: 1200px;
+}
+.logo1 {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+.section9b, .section9c, .section9d {
+    flex: 1;
+    color: white;
+    font-family: sans-serif;
+}
+.section9b {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 13.5px;
+}
+.section9c {
+    line-height: 1.5;
+    text-align: center;
+    transition: color 0.3s ease;
+    color: white;
+}
+.section9c a {
+    color: white;
+    text-decoration: none;
+    line-height: 2;
+}
+.section9c a:hover{
+    color: #1e90ff;
+}
+.section9c p{
+    font-weight: 900;
+    font-size: 18px;
+    cursor: default;
+}
+.section9d {
+    color: white;
+    text-align: center;
+}
+.section9d p {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.social-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.social-icons a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.social-icons a:hover {
+    color: #1e90ff;
+    transform: translateY(-5px);
+}
+/* --- MOBILE PHONES --- */
+@media screen and (max-width: 480px) {
+    .section9 {
+        min-height: auto; 
+        padding: 50px 0;
+    }
+    .section9-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px; 
+    }
+    .section9b, .section9c, .section9d {
+        width: 100%; 
+        flex: none; 
+    }
+    .logo1 {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    .section9c p, .section9d p {
+        margin-bottom: 10px;
+        font-size: 20px; 
+    }
+    .section9c a {
+        line-height: 1.5; 
+        display: block;
+    }
+    .social-icons {
+        gap: 40px; 
+        margin-top: 10px;
+    }
+}
+/* --- SMART TVs --- */
+@media screen and (min-width: 1800px) {
+    .section9-container {
+        max-width: 1600px;
+        gap: 150px;
+    }
+    .logo1 {
+        width: 250px;
+    }
+    .section9b { font-size: 20px; }
+    .section9c p, .section9d p { font-size: 28px; }
+    .section9c a { font-size: 22px; }
+    .social-icons a { font-size: 40px; }
+}
+
+
+
+/*SECTION 10*/
+.section10 {
+    position: relative;
+    width: 100%;
+    min-height: 7vh;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    color: white;
+}
+.kve {
+    color: rgb(151, 143, 141);
+}
+/* --- MOBILE PHONES --- */
+@media screen and (max-width: 480px) {
+    .section10 {
+        flex-direction: column; 
+        padding: 20px 10px;
+        font-size: 12px; 
+        text-align: center;
+        gap: 10px;
+        min-height: auto;
+    }
+    .section10 {
+        color: transparent; 
+    }
+    .section10, .kve {
+        color: white;
+    }
+    .kve {
+        color: rgb(151, 143, 141);
+        margin-bottom: 5px;
+    }
+}
+/* --- SMART TVs --- */
+@media screen and (min-width: 1800px) {
+    .section10 {
+        font-size: 18px;
+        min-height: 5vh;
+    }
 }
