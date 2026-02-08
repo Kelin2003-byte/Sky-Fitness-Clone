@@ -1611,7 +1611,7 @@ html, body {
 @media screen and (max-width: 480px) {
     .section10 {
         flex-direction: column; 
-        padding: 20px 10px;
+        padding: 5px 10px;
         font-size: 12px; 
         text-align: center;
         gap: 10px;
@@ -1625,7 +1625,7 @@ html, body {
     }
     .kve {
         color: rgb(151, 143, 141);
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
 }
 /* --- SMART TVs --- */
@@ -1635,3 +1635,4 @@ html, body {
         min-height: 5vh;
     }
 }
+
